@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 
 import { ProductsService } from './services/products.service';
+import { UtilsService } from './services/utils.service';
+
 import { Product } from './models/product';
 import { Categorie } from './models/categorie';
 
@@ -12,6 +14,7 @@ import { Categorie } from './models/categorie';
 
 
 export class AppComponent {
+  protected filterSearchbarValue: string = '';
   private tab_products: Array<Product> = [];
   protected tab_products_displayed: Array<Product> = [];
   protected tab_categories: Array<Categorie> = [];
@@ -19,18 +22,13 @@ export class AppComponent {
 
   constructor(
     private _productsService: ProductsService,
+    private _utilsService: UtilsService,
   ){}
 
 
   ngOnInit(){
     this.tab_products = this._productsService.tab_products;
     this.tab_categories = this._productsService.tab_categories;
-
-
-
-
-    this.tab_products_displayed = this.tab_products
-    console.log(this.tab_products_displayed)
   }
 
   filterCategories(categorie: Categorie){
@@ -45,12 +43,13 @@ export class AppComponent {
 
 
   displayProducts(){
+    let searchBarVal = this._utilsService.normalizeString(this.filterSearchbarValue);
 
     /* Tab Filters */
     this.tab_products_displayed = this.tab_products.filter(product => {
-      // let offre_nom = this._utilsService.normalizeString(offre.nom);
+      let product_name = this._utilsService.normalizeString(product.name);
       
-      // let condSearchbar = offre_nom.includes(searchBarVal);
+      let condSearchbar = product_name.includes(searchBarVal);
       // let condPrix = offre.prix >= this.tab_filtres_selected.prix_min && offre.prix <= this.tab_filtres_selected.prix_max;
       
       let condCategorie = false;
@@ -64,7 +63,7 @@ export class AppComponent {
         condCategorie = true;
       }
 
-      return (condCategorie)
+      return (condSearchbar && condCategorie)
     });
     /* Tab Filters */
   }
