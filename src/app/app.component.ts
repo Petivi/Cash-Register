@@ -29,6 +29,8 @@ export class AppComponent {
   ngOnInit(){
     this.tab_products = this._productsService.tab_products;
     this.tab_categories = this._productsService.tab_categories;
+
+    this.displayProducts();
   }
 
   filterCategories(categorie: Categorie){
