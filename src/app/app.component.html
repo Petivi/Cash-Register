@@ -7,5 +7,40 @@
 
   <div class="boutique">
 
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h5>Filtres</h5>
+
+          <div>
+            <p>Par catégorie</p>
+            <div class="form-check" *ngFor="let categorie of tab_categories; let i=index;">
+              <input class="form-check-input" type="checkbox" value="" id="categorie_{{i}}" (change)="filterCategories(categorie)">
+              <label class="form-check-label" for="categorie_{{i}}">
+                {{ categorie.name }}
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-9">
+          <h5>Produits</h5>
+
+          <div class="row">
+            <div class="col-4" *ngFor="let product of tab_products_displayed">
+              <div class="card">
+                <img class="card-img-top" [src]="product.image">
+                <div class="card-body">
+                  <h5 class="card-title">{{ product.name }}</h5>
+                  <p class="card-text">{{ product.price }} €</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>

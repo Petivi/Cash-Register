@@ -1,10 +1,10 @@
 export class Product {
     constructor(
-        private id: number, 
-        private name: string,
-        private image: string,
-        private price: number,
-        private tva: number,
-        private categorie: string,
+        public id: number, 
+        public name: string,
+        public image: string,
+        public price: number,
+        public tva: number,
+        public categorie: string,
     ) {}
 }
