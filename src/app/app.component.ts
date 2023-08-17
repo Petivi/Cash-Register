@@ -14,9 +14,10 @@ import { Categorie } from './models/categorie';
 
 
 export class AppComponent {
-  protected filterSearchbarValue: string = '';
   private tab_products: Array<Product> = [];
   protected tab_products_displayed: Array<Product> = [];
+  
+  protected filter_searchbar_value: string = '';
   protected tab_categories: Array<Categorie> = [];
   protected tab_categories_filter: Array<Categorie> = [];
 
@@ -45,14 +46,13 @@ export class AppComponent {
 
 
   displayProducts(){
-    let searchBarVal = this._utilsService.normalizeString(this.filterSearchbarValue);
+    let searchbar_val = this._utilsService.normalizeString(this.filter_searchbar_value);
 
     /* Tab Filters */
     this.tab_products_displayed = this.tab_products.filter(product => {
       let product_name = this._utilsService.normalizeString(product.name);
       
-      let condSearchbar = product_name.includes(searchBarVal);
-      // let condPrix = offre.prix >= this.tab_filtres_selected.prix_min && offre.prix <= this.tab_filtres_selected.prix_max;
+      let condSearchbar = product_name.includes(searchbar_val);
       
       let condCategorie = false;
       if(this.tab_categories_filter.length > 0){
