@@ -9,7 +9,7 @@
 
     <div class="container">
       <div class="row justify-content-md-center">
-        <div class="col-3">
+        <div class="div_filters col-3">
           <h5>Filtres</h5>
 
           <div>
@@ -29,11 +29,14 @@
           </div>
         </div>
 
-        <div class="col-9">
+
+
+
+        <div class="div_products col-9">
           <h5>Produits</h5>
 
           <div class="row">
-            <div class="col-4" *ngFor="let product of tab_products_displayed">
+            <div class="col-4 around_products_card" *ngFor="let product of tab_products_displayed">
               <div class="card">
                 <img class="card-img-top" [src]="product.image">
                 <div class="card-body">
