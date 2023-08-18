@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 
 import { ProductsService } from './services/products.service';
 import { UtilsService } from './services/utils.service';
+import { PaniersService } from './services/paniers.service';
 
 import { Product } from './models/product';
 import { Categorie } from './models/categorie';
-import { PaniersService } from './services/paniers.service';
 import { Article } from './models/article';
 
 @Component({
