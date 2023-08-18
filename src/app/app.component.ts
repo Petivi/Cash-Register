@@ -70,4 +70,9 @@ export class AppComponent {
     /* Tab Filters */
   }
 
+
+  addToCart(product: Product){
+
+  }
+
 }

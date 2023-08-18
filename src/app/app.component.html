@@ -43,7 +43,7 @@
                   <h5 class="card-title">{{ product.name }}</h5>
                   <p class="card-text product_price">{{ product.price }} €</p>
                   <div class="div_add_to_cart">
-                    <button type="button" class="btn btn-primary">Ajouter au panier</button>
+                    <button type="button" class="btn btn-outline-primary" (click)="addToCart(product)">Ajouter au panier</button>
                   </div>
                 </div>
               </div>
