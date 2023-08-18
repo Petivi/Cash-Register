@@ -53,6 +53,11 @@ div.main{
                     display: flex;
                     flex-direction: row-reverse;
                 }
+
+                div.div_add_to_cart{
+                    display: flex;
+                    justify-content: center;
+                }
             }
         }
     }
