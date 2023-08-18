@@ -5,6 +5,8 @@ import { UtilsService } from './services/utils.service';
 
 import { Product } from './models/product';
 import { Categorie } from './models/categorie';
+import { PaniersService } from './services/paniers.service';
+import { Article } from './models/article';
 
 @Component({
   selector: 'app-root',
@@ -24,6 +26,7 @@ export class AppComponent {
   constructor(
     private _productsService: ProductsService,
     private _utilsService: UtilsService,
+    private _paniersService: PaniersService,
   ){}
 
 
@@ -72,7 +75,23 @@ export class AppComponent {
 
 
   addToCart(product: Product){
+    let article = new Article(product, 1);
+    let product_already_in_cart = false;
 
+    /* Check if article is already in cart */
+    this._paniersService.panier.forEach(element => {
+      if(element.product === product){
+        element.quantite += 1;
+        product_already_in_cart = true;
+      }
+    });
+
+    /* If not, then add it */
+    if(!product_already_in_cart){
+      this._paniersService.panier.push(article);
+    }
+
+    console.log(this._paniersService.panier)
   }
 
 }
