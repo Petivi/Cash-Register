@@ -35,6 +35,8 @@ div.main{
                         top: 2em;
                         border: 1px solid black;
                         background: white;
+                        min-width: 15em;
+                        max-width: 20em;
                     }
                 }
 
@@ -100,4 +102,12 @@ div.main{
             }
         }
     }
+}
+
+
+ngb-toast{
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 3em;
 }

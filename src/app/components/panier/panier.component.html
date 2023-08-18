@@ -1,1 +1,13 @@
-<p>panier works!</p>
+
+
+<div class="cart">
+    <h5>Panier</h5>
+
+    <div *ngIf="this._paniersService.panier.length == 0">
+        <p>Votre panier est vide</p>
+    </div>
+
+    <div *ngIf="this._paniersService.panier.length > 0">
+        
+    </div>
+</div>

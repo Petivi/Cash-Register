@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, TemplateRef } from '@angular/core';
 
 import { ProductsService } from './services/products.service';
 import { UtilsService } from './services/utils.service';
 import { PaniersService } from './services/paniers.service';
+import { ToastsService } from './services/toasts.service';
 
 import { Product } from './models/product';
 import { Categorie } from './models/categorie';
@@ -26,7 +27,8 @@ export class AppComponent {
   constructor(
     private _productsService: ProductsService,
     private _utilsService: UtilsService,
-    private _paniersService: PaniersService
+    private _paniersService: PaniersService,
+    protected _toastsService: ToastsService
   ){}
 
 
@@ -91,7 +93,11 @@ export class AppComponent {
       this._paniersService.panier.push(article);
     }
 
-    console.log(this._paniersService.panier)
+    this._toastsService.show('Article ajouté au panier', { classname: 'bg-success text-light', delay: 5000 })
   }
+
+  isTemplate(toast: any) {
+		return toast.textOrTpl instanceof TemplateRef;
+	}
 
 }

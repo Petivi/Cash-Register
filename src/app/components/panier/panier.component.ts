@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { PaniersService } from 'src/app/services/paniers.service';
+
 
 @Component({
   selector: 'app-panier',
@@ -7,4 +9,7 @@ import { Component } from '@angular/core';
 })
 export class PanierComponent {
 
+  constructor(
+    protected _paniersService: PaniersService
+  ){}
 }
