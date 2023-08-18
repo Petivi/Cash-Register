@@ -5,11 +5,13 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatIconModule} from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
+import { PanierComponent } from './components/panier/panier.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PanierComponent
   ],
   imports: [
     BrowserModule,

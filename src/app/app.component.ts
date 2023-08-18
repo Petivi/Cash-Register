@@ -26,7 +26,7 @@ export class AppComponent {
   constructor(
     private _productsService: ProductsService,
     private _utilsService: UtilsService,
-    private _paniersService: PaniersService,
+    private _paniersService: PaniersService
   ){}
 
 
