@@ -20,6 +20,39 @@ div.main{
 
             div.around_products_card{
                 padding: 0.75em;
+
+                img.product_image{
+                    height: 175px;
+                    width: 100%;
+                    object-fit: cover;
+                    margin: 0 auto;
+                }
+
+                h5.card-title{
+                    --line-height: 1.5rem;
+                    --line-clamp: 2;
+                    font-size: 1.25rem;
+                    overflow: hidden;
+                    width: 100%;
+                    display: -webkit-box;
+                    -webkit-line-clamp: var(--line-clamp);
+                    -webkit-box-orient: vertical;  
+                    line-height: var(--line-height);
+                    height: calc(var(--line-height) * var(--line-clamp));
+                    margin-bottom: 0.5rem;
+                    font-weight: 600;
+                }
+
+                p.product_price{
+                    --prix-height: 1.375rem;
+                    height: var(--prix-height);
+                    position: relative;
+                    font-size: var(--prix-height);
+                    font-weight: 700;
+                    line-height: var(--prix-height);
+                    display: flex;
+                    flex-direction: row-reverse;
+                }
             }
         }
     }
