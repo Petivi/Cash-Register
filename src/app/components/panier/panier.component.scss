@@ -25,6 +25,20 @@ div.cart{
                 padding-left: 1em;
             }
         }
+
+        li.cart_total{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            border: none;
+            border-bottom: 1px solid grey;
+            border-radius: 0;
+
+            div.price_total{
+                font-size: 1.3em;
+                font-weight: 600;
+            }
+        }
     }
 
     div.btn_valid_cart{
