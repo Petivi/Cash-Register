@@ -10,8 +10,11 @@
     <div *ngIf="this._paniersService.panier.length > 0">
         <ul class="list-group list-group-light">
             <li class="list-group-item article_item" *ngFor="let article of this._paniersService.panier">
-                <div>
-                    <span class="product_name">{{ article.product.name }} </span> <span class="product_quantity"> x{{ article.quantite }}</span>
+                <div class="product_name">
+                    {{ article.product.name }}
+                </div>
+                <div class="product_quantity">
+                    x{{ article.quantite }}
                 </div>
                 <div class="product_price">
                     {{ (article.product.price * article.quantite) | currency: 'EUR':'symbol':undefined:'fr-FR' }}

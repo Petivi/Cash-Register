@@ -11,11 +11,17 @@ div.cart{
             border-bottom: 1px solid grey;
             border-radius: 0;
 
-            span.product_name{
-                font-weight: 500;
+            div{
+                display: flex;
+                align-items: center;
             }
 
-            span.product_quantity{
+            div.product_name{
+                font-weight: 500;
+                padding-right: 0.5em;
+            }
+
+            div.product_quantity{
                 font-size: 0.9em;
             }
 
