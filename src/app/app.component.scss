@@ -60,6 +60,23 @@ div.main{
             text-align: center;
         }
 
+        div.div_filters{
+
+            div.div_filter_nom, div.div_filter_categories{
+                margin: 1em 0;
+
+                p{
+                    margin: 0;
+                    text-decoration: underline;
+                    line-height: 2;
+                }
+            }
+            
+            input.filter_searchbar{
+                width: 100%;
+            }
+        }
+
         div.div_products{
 
             div.around_products_card{
@@ -110,7 +127,7 @@ div.main{
 
 ngb-toast{
     position: fixed;
-    top: 0;
+    top: 1em;
     right: 0;
     margin: 3em;
     z-index: 2;
