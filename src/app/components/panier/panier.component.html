@@ -20,10 +20,10 @@
 
             <li class="list-group-item cart_total">
                 <div>
-                    Article(s) : {{ this._paniersService.panier.length }}
+                    Article(s) : {{ getTotalProducts() }}
                 </div>
                 <div class="price_total">
-                    Total : 30 €
+                    Total : {{ getTotalPrice() | currency: 'EUR':'symbol':undefined:'fr-FR' }}
                 </div>
             </li>
           </ul>
