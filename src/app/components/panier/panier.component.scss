@@ -6,6 +6,10 @@ div.cart{
     ul{
         li.article_item{
             display: flex;
+            justify-content: space-between;
+            border: none;
+            border-bottom: 1px solid grey;
+            border-radius: 0;
 
             span.product_name{
                 font-weight: 500;
