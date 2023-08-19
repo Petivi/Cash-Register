@@ -2,4 +2,22 @@
 
 div.cart{
     padding: 1em;
+
+    ul{
+        li.article_item{
+            display: flex;
+
+            span.product_name{
+                font-weight: 500;
+            }
+
+            span.product_quantity{
+                font-size: 0.9em;
+            }
+
+            div.separator{
+                padding: 0 0.5em;
+            }
+        }
+    }
 }

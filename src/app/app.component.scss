@@ -33,10 +33,13 @@ div.main{
                         transition:visibility 0.5s linear, opacity 0.5s linear;
                         position: absolute;
                         top: 2em;
+                        right: 0;
                         border: 1px solid black;
+                        border-radius: 2%;
                         background: white;
                         min-width: 15em;
                         max-width: 20em;
+                        z-index: 1;
                     }
                 }
 
@@ -110,4 +113,5 @@ ngb-toast{
     top: 0;
     right: 0;
     margin: 3em;
+    z-index: 2;
 }
