@@ -84,6 +84,17 @@ div.main{
             div.around_products_card{
                 padding: 0.75em;
 
+
+                div.card{
+                    transition-duration: 500ms;
+                }
+                
+                div.card:hover{
+                    transform: scale(1.1);
+                    box-shadow: 0 0 20px 0px black;
+                    transition-duration: 500ms;
+                }
+
                 img.product_image{
                     height: 175px;
                     width: 100%;
