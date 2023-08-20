@@ -11,11 +11,13 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { PanierComponent } from './components/panier/panier.component';
+import { ToastComponent } from './components/toast/toast.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PanierComponent
+    PanierComponent,
+    ToastComponent
   ],
   imports: [
     BrowserModule,

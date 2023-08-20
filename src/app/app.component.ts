@@ -96,8 +96,4 @@ export class AppComponent {
     this._toastsService.show('Article ajouté au panier', { classname: 'bg-success text-light', delay: 3000 })
   }
 
-  isTemplate(toast: any) {
-		return toast.textOrTpl instanceof TemplateRef;
-	}
-
 }
